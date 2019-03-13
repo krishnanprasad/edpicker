@@ -1,0 +1,15 @@
+.box {
+    display: flex;
+    align-items:center;
+ }
+ .jumbotron{
+    padding: 1rem 2rem;
+}
+.card{
+    box-shadow: 0 1px 2px 0 rgba(54, 54, 54, 0.13), 0 1px 5px 0 rgba(54, 54, 54, 0.13);
+}
+ .card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+    transition: transform .2s; /* Animation */
+    transform: scale(1.015);
+ }

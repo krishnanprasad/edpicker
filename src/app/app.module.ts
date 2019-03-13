@@ -9,6 +9,9 @@ import { TrendingComponent } from './Home/trending/trending.component';
 import {HomeComponent} from './Home/home.component';
 import { from } from 'rxjs';
 import { CalenderComponent } from './Home/calender/calender.component';
+import { BlogsComponent } from './Home/blogs/blogs.component';
+import { AboutComponent } from './Home/about/about.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,14 @@ import { CalenderComponent } from './Home/calender/calender.component';
     NavigationCardRowComponent,
     TrendingComponent,
     HomeComponent,
-    CalenderComponent
+    CalenderComponent,
+    BlogsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
