@@ -5,12 +5,12 @@
     </div>
     <div class="row" style="padding-top:10px;">
       <div class="form-group col-lg-5">
-          <div [ngClass]="'dropdown'">
-              <input type="text" (input)="onSearchChange($event.target.value)" [(ngModel)]="Institution" id="textboxitem" class="form-control dropbtn"style="padding: 20px 10px;">
-              <div [ngClass]="Isdropdown===true?'dropdown-content cc':'dropdown-content'">
-                  <a class="dropdown-item" href="#">A 1</a>
-                  <a class="dropdown-item" href="#">Link 2</a>
-                  <a class="dropdown-item" href="#">Link 3</a>
+          <div [ngClass]="'dropdown'" style="width:100%">
+              <input type="text" (input)="onTypeSearchChange($event.target.value)" placeholder="School Type" [value]="SearchValue" [(ngModel)]="Institution" id="textboxitem" class="form-control dropbtn"style="padding: 20px 10px;color:black">
+              <div [ngClass]="IsTypedropdown===true?'dropdown-content cc':'dropdown-content'">
+                  <span class="dropdown-item" (click)="onTypeSelect('a')">Samacheer</span>
+                  <span class="dropdown-item" (click)="onTypeSelect('b')">CBSC</span>
+                  <span class="dropdown-item" (click)="onTypeSelect('c')">ICSC</span>
               </div>
           </div>
         <!-- <input id="Course" class="TextBox" type="text" name="Course" title="Enter first name" placeholder="Course"
@@ -19,8 +19,14 @@
       </div>
 
       <div class="form-group col-lg-5">
-        <input id="Location" class="TextBox" type="text" name="Location" title="Enter last name" placeholder="Location"
-          style="padding: 20px 10px;" />
+        <div [ngClass]="'dropdown'" style="width:100%">
+          <input type="text" (input)="onLocationSearchChange($event.target.value)" placeholder="Enter City" [(ngModel)]="Location" id="textboxitem" class="form-control dropbtn"style="padding: 20px 10px;color:black">
+          <div [ngClass]="IsLocationdropdown===true?'dropdown-content cc':'dropdown-content'">
+              <span class="dropdown-item" (click)="onLocationSelect('a')">A 1</span>
+              <span class="dropdown-item" (click)="onLocationSelect('b')">Link 2</span>
+              <span class="dropdown-item" (click)="onLocationSelect('c')">Link 3</span>
+          </div>
+      </div>
       </div>
       <div class="form-group col-lg-2">
 

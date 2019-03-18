@@ -12,6 +12,8 @@ import { CalenderComponent } from './Home/calender/calender.component';
 import { BlogsComponent } from './Home/blogs/blogs.component';
 import { AboutComponent } from './Home/about/about.component';
 import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
+import { PlaySchoolCardComponent } from './Common/play-school-card/play-school-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     CalenderComponent,
     BlogsComponent,
-    AboutComponent
+    AboutComponent,
+    SearchComponent,
+    PlaySchoolCardComponent
   ],
   imports: [
     BrowserModule,

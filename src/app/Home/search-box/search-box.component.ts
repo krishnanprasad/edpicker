@@ -7,18 +7,40 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./search-box.component.css']
 })
 export class SearchBoxComponent {
-  @Input() Institution: string;
-  public Isdropdown=false;;
+  private Institution: string;
+  private Location:string;
+
+  public IsTypedropdown=false;
+  public IsLocationdropdown=false;
+  
   constructor() {
   }
-  onSearchChange(searchValue: string) {
+  onTypeSearchChange(searchValue: string) {
     if (searchValue.length > 0) {
       console.log(searchValue);
-      this.Isdropdown=true;
+      this.IsTypedropdown=true;
     }
     else {
-      console.log("NO CHANGE" + searchValue);
-      this.Isdropdown=false;
+      console.log("NO CHANGE in Type" + searchValue);
+      this.IsTypedropdown=false;
     }
+  }
+  onLocationSearchChange(searchValue: string) {
+    if (searchValue.length > 0) {
+      console.log(searchValue);
+      this.IsLocationdropdown=true;
+    }
+    else {
+      console.log("NO CHANGE in Location" + searchValue);
+      this.IsLocationdropdown=false;
+    }
+  }
+  onTypeSelect(item){
+    this.Institution=item;
+    this.IsTypedropdown=false;
+  }
+  onLocationSelect(item){
+    this.Location=item;
+    this.IsLocationdropdown=false;
   }
 }
