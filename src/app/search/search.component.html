@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-3">
       <div class="form-group">
-        <label for="Typefilter">Type:</label>
+        <label for="Typefilter" class="LabelFont">Type:</label>
         <div [ngClass]="'dropdown'" style="width:100%">
           <input type="text" (input)="onTypeSearchChange($event.target.value)" placeholder="School Type"
             [value]="SearchValue" [(ngModel)]="Type" id="Typefilter" class="form-control dropbtn"
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="form-group">
-          <label for="Cityfilter">City:</label>
+          <label for="Cityfilter" class="LabelFont">City:</label>
           <div [ngClass]="'dropdown'" style="width:100%">
             <input type="text" (input)="onCitySearchChange($event.target.value)" placeholder="City"
               [value]="SearchValue" [(ngModel)]="City" id="Cityfilter" class="form-control dropbtn"
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="form-group">
-            <label for="Locationfilter">Location:</label>
+            <label for="Locationfilter" class="LabelFont">Location:</label>
             <div [ngClass]="'dropdown'" style="width:100%">
               <input type="text" (input)="onLocationSearchChange($event.target.value)" placeholder="School Type"
                 [value]="SearchValue" [(ngModel)]="Location" id="Locationfilter" class="form-control dropbtn"

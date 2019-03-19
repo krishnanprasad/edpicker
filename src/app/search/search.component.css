@@ -32,3 +32,9 @@
 .dropdown:hover .dropbtn {
     background-color: #acacac;
 }
+
+
+
+.LabelFont{
+    font-size: 14px;font-family: 'Bitter', serif;
+}
